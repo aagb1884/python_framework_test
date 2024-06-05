@@ -1,4 +1,5 @@
-from django.http import HttpResponse
+# from django.http import Http404
+# from django.template import loader
 from rest_framework import viewsets, status
 from .models import Message
 from .serializers import MessageSerializer
@@ -10,7 +11,12 @@ from rest_framework.decorators import api_view
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the facebean index.")
+    latest_message_list = Message.objects.order_by("pub_date")[:5]
+    context = {
+        "latest_message_list": latest_message_list,
+    }
+    return render(request, "facebean/index.html", context)
+
 
 class MessageViewset(viewsets.ModelViewSet):
     queryset= Message.objects.all()
