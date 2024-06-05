@@ -15,3 +15,5 @@ class MessagePostTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Message.objects.count(), 1)
         self.assertEqual(Message.objects.get().content, 'I cannot wait to serve my country.')
+        self.assertEqual(Message.objects.get().username, 'Cuthbert_CW')
+
