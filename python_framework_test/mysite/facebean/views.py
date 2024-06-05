@@ -22,7 +22,7 @@ class MessageViewset(viewsets.ModelViewSet):
     queryset= Message.objects.all()
     serializer_class = MessageSerializer
 
-@api_view(['GET', 'POST', 'DELETE'])
+@api_view(['GET', 'POST'])
 def message_list(request):
     if request.method == 'GET':
         messages = Message.objects.all()
@@ -43,9 +43,7 @@ def message_list(request):
             return JsonResponse(message_serializer.data, status=status.HTTP_201_CREATED) 
         return JsonResponse(message_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-    elif request.method == 'DELETE':
-        count = Message.objects.all().delete()
-        return JsonResponse({'message': '{} Messages were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+   
  
  
 @api_view(['GET', 'PUT', 'DELETE'])

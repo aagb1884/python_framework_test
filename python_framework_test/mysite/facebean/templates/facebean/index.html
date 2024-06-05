@@ -1,10 +1,28 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'facebean/style.css' %}">
+
 {% if latest_message_list %}
-    <ul>
+   
+    <div class="face-bean-logo">
+       <h1 class="face">FACE</h1><h1>BEAN</h1>
+    </div>
     {% for message in latest_message_list %}
-        <li>{{ message.username}}: {{ message.content }}</li>
-        <li>{{ message.pub_date }}</li>
+    <div class="message">
+        <div class="message-content">
+    <img src="../static/{{message.avatar}}" alt="user avatar" height="50" width="70">
+        <p>{{ message.username}}:</p>
+    </div>
+        <p>{{ message.content }}</p>
+        
+        
+        <aside>{{ message.pub_date }}</aside>
+    </div>
     {% endfor %}
-    </ul>
+    
 {% else %}
+<div class="face-bean-logo">
+<h1 class="face">FACE</h1><h1>BEAN</h1>
+</div>
     <p>No messages are available.</p>
 {% endif %}
