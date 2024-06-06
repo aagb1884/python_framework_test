@@ -12,11 +12,11 @@ from rest_framework.decorators import api_view
 
 def index(request):
     latest_message_list = Message.objects.order_by("pub_date")[:5]
+    
     context = {
         "latest_message_list": latest_message_list,
     }
     return render(request, "facebean/index.html", context)
-
 
 class MessageViewset(viewsets.ModelViewSet):
     queryset= Message.objects.all()
@@ -46,34 +46,34 @@ def message_list(request):
    
  
  
-@api_view(['GET', 'PUT', 'DELETE'])
-def message_detail(request, pk):
-    try: 
-        message = Message.objects.get(pk=pk) 
-    except Message.DoesNotExist: 
-        return JsonResponse({'message': 'The message does not exist'}, status=status.HTTP_404_NOT_FOUND) 
+# @api_view(['GET', 'PUT', 'DELETE'])
+# def message_detail(request, pk):
+#     try: 
+#         message = Message.objects.get(pk=pk) 
+#     except Message.DoesNotExist: 
+#         return JsonResponse({'message': 'The message does not exist'}, status=status.HTTP_404_NOT_FOUND) 
  
-    if request.method == 'GET': 
-        message_serializer = MessageSerializer(message) 
-        return JsonResponse(message_serializer.data) 
+#     if request.method == 'GET': 
+#         message_serializer = MessageSerializer(message) 
+#         return JsonResponse(message_serializer.data) 
  
-    elif request.method == 'PUT': 
-        message_data = JSONParser().parse(request) 
-        message_serializer = MessageSerializer(message, data=message_data) 
-        if message_serializer.is_valid(): 
-            message_serializer.save() 
-            return JsonResponse(message_serializer.data) 
-        return JsonResponse(message_serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
+#     elif request.method == 'PUT': 
+#         message_data = JSONParser().parse(request) 
+#         message_serializer = MessageSerializer(message, data=message_data) 
+#         if message_serializer.is_valid(): 
+#             message_serializer.save() 
+#             return JsonResponse(message_serializer.data) 
+#         return JsonResponse(message_serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
  
-    elif request.method == 'DELETE': 
-        message.delete() 
-        return JsonResponse({'message': 'Message was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
+#     elif request.method == 'DELETE': 
+#         message.delete() 
+#         return JsonResponse({'message': 'Message was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
     
         
-@api_view(['GET'])
-def message_list_published(request):
-    messages = Message.objects.filter(published=True)
+# @api_view(['GET'])
+# def message_list_published(request):
+#     messages = Message.objects.filter(published=True)
         
-    if request.method == 'GET': 
-        message_serializer = MessageSerializer(messages, many=True)
-        return JsonResponse(message_serializer.data, safe=False)
+#     if request.method == 'GET': 
+#         message_serializer = MessageSerializer(messages, many=True)
+#         return JsonResponse(message_serializer.data, safe=False)

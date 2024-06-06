@@ -1,7 +1,9 @@
+
 .message {
      display: flex;
      flex-direction: column;
      padding: 20px;
+     border: solid 1px grey;
 }
 
 .message-content {
@@ -9,8 +11,30 @@
     flex-direction: row;
 }
 
+body #send-message {
+    border: solid 3px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    line-height: 2;
+}
+
+img {
+    border-radius: 50%;
+    padding: 10px;
+}
+
 aside {
     font-size: smaller;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .face-bean-logo {
@@ -19,19 +43,16 @@ aside {
 }
 
 .face {
-    font: 800 40px Arial;
+    font: 1000 100px Arial;
     color:rgb(0, 200, 255);
     background-color: blue;
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 2px;
   }
-h1 {
-    font: 800 40px Arial;
+body h1 {
+    font: 1000 100px Arial;
     color:red;
     -webkit-text-fill-color: yellow;
     -webkit-text-stroke: 2px;
   }
   
-  @keyframes pulsate {
-    50%{ stroke-width:5px }
-  }

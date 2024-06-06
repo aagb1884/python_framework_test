@@ -1,20 +1,53 @@
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceBean</title>
+    <script>
 
-<link rel="stylesheet" href="{% static 'facebean/style.css' %}">
+   function setDateTime() {
+    const now = new Date().toISOString();
+    document.getElementById('pub_date').value = now;
+}
 
+   </script>
+
+   {% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
 {% if latest_message_list %}
-   
+    <header>
     <div class="face-bean-logo">
-       <h1 class="face">FACE</h1><h1>BEAN</h1>
+       <h1 class="face">Face</h1><h1>BEAN</h1>
     </div>
+        <p><i>The messaging app of choice for Beanotown</i></p>
+    </header>
+
+    <form id="send-message" action="/api/messages/" method="post">
+        
+        <label for="username">User: </label>
+        <input id="username" type="text" name="username" placeholder="Username...">
+        <label for="avatar">Profile Pic Link: </label>
+        <input id="avatar" type="text" name="avatar" placeholder="Image link">
+        <label for="content">Message: </label>
+        <input id="content" type="text" name="content" placeholder="Write your message...">
+        <input id="pub_date" type="hidden" name="pub_date">
+
+        <input type="submit" value="Send Message" onclick="setDateTime()">
+
+    </form>
+    </div>
+
     {% for message in latest_message_list %}
     <div class="message">
         <div class="message-content">
-    <img src="../static/{{message.avatar}}" alt="user avatar" height="50" width="70">
+    <img src="../static/{{message.avatar}}" id="user-avatar" alt="user avatar" height="50" width="70">
         <p>{{ message.username}}:</p>
     </div>
         <p>{{ message.content }}</p>
-        
         
         <aside>{{ message.pub_date }}</aside>
     </div>
@@ -26,3 +59,6 @@
 </div>
     <p>No messages are available.</p>
 {% endif %}
+
+</body>
+</html>
