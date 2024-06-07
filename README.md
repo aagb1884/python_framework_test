@@ -24,8 +24,6 @@ The app displays messages the five most recent messages sent by the inhabitants 
     ```
     python -m pip install Django
     ```
-    * NB. On Windows use 'py' instead of 'python'
-      
 5. Clone this repository into the Virtual Environment
    ```
    git clone git@github.com:aagb1884/python_framework_test.git
