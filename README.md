@@ -15,10 +15,14 @@ The project is structured as follows: first I created a local development enviro
 
 ![image](https://github.com/aagb1884/python_framework_test/assets/113289014/57d7ec5b-7710-4b2d-ab57-69bdadc654c1)
 
+The API was tested programmatically and via Postman:
+![image](https://github.com/aagb1884/python_framework_test/assets/113289014/84d42321-f85b-4a8e-91d5-f488111e86d5)
+
 I installed [Django REST framework](https://www.django-rest-framework.org/) using the terminal (though other options are available, see link for details).
 ```
 pip install djangorestframework
 ```
+
 
 ## Get it working locally
 
