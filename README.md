@@ -7,9 +7,9 @@ Facebean is the messaging service used by the citizens of Beanotown. Here's how 
 
 This was my first time working with Django so I followed various tutorials to reach MVP: a page that displayed all messages stored in a database.
 
-As it was a small project I decided to use SQL Lite rather than MySQL or PostgreSQL. I used (DB Browser for SQLite)[https://sqlitebrowser.org/] to open the database file generated. 
+As it was a small project I decided to use SQL Lite rather than MySQL or PostgreSQL. I used [DB Browser for SQLite](https://sqlitebrowser.org/) to open the database file generated. 
 
-The app displays messages the five most recent messages sent by the inhabitants of (Beanotown)[https://www.beano.com/categories/beanotown] to each other. The jokes were topical when I wrote them.
+The app displays messages the five most recent messages sent by the inhabitants of [Beanotown](https://www.beano.com/categories/beanotown) to each other. The jokes were topical when I wrote them.
 
 ## Get it working locally
 
