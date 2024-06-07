@@ -11,10 +11,22 @@ As it was a small project I decided to use SQL Lite rather than MySQL or Postgre
 
 The app displays messages the five most recent messages sent by the inhabitants of [Beanotown](https://www.beano.com/categories/beanotown) to each other. The jokes were topical when I wrote them.
 
+The project is structured as follows: first I created a local development environment. Within this I created a Django project called 'mysite' and within this I created the Facebean app. 
+![image](https://github.com/aagb1884/python_framework_test/assets/113289014/1b5cfc00-ee55-4b45-8781-39a7a23dc1c6)
+![image](https://github.com/aagb1884/python_framework_test/assets/113289014/122f490f-83ae-4ace-a29f-45ac2a1b7f43)
+![image](https://github.com/aagb1884/python_framework_test/assets/113289014/c4c399c6-5844-4a87-a2e4-c30dffbfd12e)
+![image](https://github.com/aagb1884/python_framework_test/assets/113289014/cd7b877e-4571-41df-a077-5c4af503f8fc)
+![image](https://github.com/aagb1884/python_framework_test/assets/113289014/57d7ec5b-7710-4b2d-ab57-69bdadc654c1)
+
+I installed [Django REST framework](https://www.django-rest-framework.org/) using the terminal (though other options are available, see link for details).
+```
+pip install djangorestframework
+```
+
 ## Get it working locally
 
 1. Create a folder on your computer and move into it.
-2. Using the Command Prompt/Terminal check if you have Python installed with 'python -V'
+2. Using the Command Prompt/Terminal, check if you have Python installed with 'python -V'
    *NB. You may have to type 'python3' if 'python' isn't recognised as a command.
   
 4. Create and then activate a virtual environment for your project [click here for instructions](https://docs.python.org/3/tutorial/venv.html).
@@ -43,7 +55,7 @@ The app displays messages the five most recent messages sent by the inhabitants 
    ```
 You will be able to find the main page at [http://localhost:8000/facebean/](http://localhost:8000/facebean/).
 
-There will not be any messages there to begin with, but you can add your own using:
+There will not be any messages there to begin with, but there is a file with suggested messages. You can add these or your own using:
 * [The form on the API endpoint](http://localhost:8000/api/messages).
 * [Postman](https://www.postman.com/)/[Insomnia](https://insomnia.rest/)
 * SQL
@@ -54,4 +66,4 @@ There will not be any messages there to begin with, but you can add your own usi
 NB. Cloning this repo will include images you can use for the user avatars.
 
 
-Further advice on starting a Django project [can be found here](https://docs.djangoproject.com/en/5.0/intro/tutorial01/)
+Further advice on starting a Django project [can be found here](https://docs.djangoproject.com/en/5.0/intro/tutorial01/).
