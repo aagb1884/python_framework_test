@@ -15,8 +15,8 @@
    </script>
 
    {% load static %}
-
-<link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.png">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
 {% if latest_message_list %}
@@ -26,21 +26,7 @@
     </div>
         <p><b><i>The messaging app of choice for Beanotown</i></b></p>
     </header>
-    <!-- <div class="message-form">
-    <form id="send-message" action="/api/messages/" method="post">
-        
-        <label for="username">User: </label>
-        <input id="username" type="text" name="username" placeholder="Username...">
-        <label for="avatar">Profile Pic Link: </label>
-        <input id="avatar" type="text" name="avatar" placeholder="Image link">
-        <label for="content">Message: </label>
-        <input id="content" type="text" name="content" placeholder="Write your message...">
-        <input id="pub_date" type="hidden" name="pub_date">
-<br />
-        <input type="submit" value="Send Message" onclick="setDateTime()">
 
-    </form>
-    </div> -->
     <section>
     {% for message in latest_message_list %}
     
