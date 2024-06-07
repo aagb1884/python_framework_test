@@ -51,7 +51,7 @@ There will not be any messages there to begin with, but you can add your own usi
   ```
   python manage.py shell
   ``` 
-NB. Cloning this repo will include three images you can use for the user avatars.
+NB. Cloning this repo will include images you can use for the user avatars.
 
 
 Further advice on starting a Django project [can be found here](https://docs.djangoproject.com/en/5.0/intro/tutorial01/)
