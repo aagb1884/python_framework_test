@@ -12,6 +12,7 @@ As it was a small project I decided to use SQL Lite rather than MySQL or Postgre
 The app displays messages the five most recent messages sent by the inhabitants of [Beanotown](https://www.beano.com/categories/beanotown) to each other. The jokes were topical when I wrote them.
 
 The project is structured as follows: first I created a local development environment. Within this I created a Django project called 'mysite' and within this I created the Facebean app. 
+
 ![image](https://github.com/aagb1884/python_framework_test/assets/113289014/57d7ec5b-7710-4b2d-ab57-69bdadc654c1)
 
 I installed [Django REST framework](https://www.django-rest-framework.org/) using the terminal (though other options are available, see link for details).
