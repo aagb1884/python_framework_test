@@ -41,10 +41,10 @@ The app displays messages the five most recent messages sent by the inhabitants 
    ```
    python manage.py runserver
    ```
-You will be able to find the main page at (http://localhost:8000/facebean/)[http://localhost:8000/facebean/]
+You will be able to find the main page at [http://localhost:8000/facebean/](http://localhost:8000/facebean/).
 
 There will not be any messages there to begin with, but you can add your own using:
-* The form on the webpage
+* [The form on the API endpoint](http://localhost:8000/api/messages).
 * [Postman](https://www.postman.com/)/[Insomnia](https://insomnia.rest/)
 * SQL
 * [Python Shell](https://docs.djangoproject.com/en/5.0/intro/tutorial02/#playing-with-the-api):
