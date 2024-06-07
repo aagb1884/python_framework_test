@@ -11,6 +11,7 @@
     document.getElementById('pub_date').value = now;
 }
 
+
    </script>
 
    {% load static %}
@@ -23,9 +24,9 @@
     <div class="face-bean-logo">
        <h1 class="face">Face</h1><h1>BEAN</h1>
     </div>
-        <p><i>The messaging app of choice for Beanotown</i></p>
+        <p><b><i>The messaging app of choice for Beanotown</i></b></p>
     </header>
-
+    <!-- <div class="message-form">
     <form id="send-message" action="/api/messages/" method="post">
         
         <label for="username">User: </label>
@@ -35,24 +36,26 @@
         <label for="content">Message: </label>
         <input id="content" type="text" name="content" placeholder="Write your message...">
         <input id="pub_date" type="hidden" name="pub_date">
-
+<br />
         <input type="submit" value="Send Message" onclick="setDateTime()">
 
     </form>
-    </div>
-
+    </div> -->
+    <section>
     {% for message in latest_message_list %}
+    
     <div class="message">
         <div class="message-content">
     <img src="../static/{{message.avatar}}" id="user-avatar" alt="user avatar" height="50" width="70">
-        <p>{{ message.username}}:</p>
+        <p><b>{{ message.username}}:</b></p>
     </div>
         <p>{{ message.content }}</p>
         
         <aside>{{ message.pub_date }}</aside>
     </div>
-    {% endfor %}
     
+    {% endfor %}
+    </section>
 {% else %}
 <div class="face-bean-logo">
 <h1 class="face">FACE</h1><h1>BEAN</h1>

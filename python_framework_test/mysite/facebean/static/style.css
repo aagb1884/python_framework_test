@@ -1,33 +1,5 @@
-
-.message {
-     display: flex;
-     flex-direction: column;
-     padding: 20px;
-     border: solid 1px grey;
-}
-
-.message-content {
-    display: flex;
-    flex-direction: row;
-}
-
-body #send-message {
-    border: solid 3px;
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    padding: 10px;
-    line-height: 2;
-}
-
-img {
-    border-radius: 50%;
-    padding: 10px;
-}
-
-aside {
-    font-size: smaller;
+body {
+    background-color: blanchedalmond;
 }
 
 header {
@@ -35,11 +7,17 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    border-bottom: solid 5px red;
 }
 
 .face-bean-logo {
     display: flex;
     flex-direction: row;
+    padding: 5px;
+    border-bottom: solid 5px red;
+    width: 100%;
+    justify-content: center;
 }
 
 .face {
@@ -55,4 +33,77 @@ body h1 {
     -webkit-text-fill-color: yellow;
     -webkit-text-stroke: 2px;
   }
+
+.message-form{
+    display: flex;
+    justify-content: center;
+}
+
+#send-message {
+    border: solid 3px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    line-height: 2;
+    max-width: 500px;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px
+}
+
+.message-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.message {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     padding: 20px;
+     margin: 20px;
+     border: solid 1px grey;
+     min-width: 365px;
+     box-shadow: 5px 10px blue;
+     background-color: white;
+     z-index: 1;
+}
+
+.message::after {
+    content: '';
+    position: absolute;
+    left: 50%; 
+    bottom: -60px;
+    width: 5px; 
+    height: 50px; 
+    background-color: blue; 
+    z-index: 0;
+}
+
+.message:last-child::after {
+    display: none;
+}
+
+
+img {
+    border-radius: 50%;
+    border: solid 1px;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+aside {
+    font-size: smaller;
+}
+
+
   
