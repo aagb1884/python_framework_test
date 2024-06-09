@@ -56,10 +56,10 @@ pip install djangorestframework
    ```
 You will be able to find the main page at [http://localhost:8000/facebean/](http://localhost:8000/facebean/).
 
-There will not be any messages there to begin with, but there is a file with suggested messages. You can add these or your own using:
+There will not be any messages there to begin with, but there is a file with suggested messages (called, unsurprisingly, 'messages'). You can add these or your own using:
 * [The form on the API endpoint](http://localhost:8000/api/messages).
 * [Postman](https://www.postman.com/)/[Insomnia](https://insomnia.rest/)
-* SQL
+* SQLite Browser
 * [Python Shell](https://docs.djangoproject.com/en/5.0/intro/tutorial02/#playing-with-the-api):
   ```
   python manage.py shell
