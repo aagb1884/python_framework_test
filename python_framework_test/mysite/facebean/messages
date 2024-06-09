@@ -16,3 +16,17 @@
     "username": "minE-TEH-minx",
     "avatar": "images/minnie.jpg"
 }
+{
+    "content": "have you tried being rich?",
+    "pub_date": "{{current_timestamp}}",
+    "username": "lord_snooty",
+    "avatar": "images/snooty.jpg"
+}
+{
+    "content": "hey remember me?",
+    "pub_date": "{{current_timestamp}}",
+    "username": "biffo",
+    "avatar": "images/biffo.jpg"
+}
+
+//json set up for use on Postman/Insomnia but can be copied/pasted into browser.
