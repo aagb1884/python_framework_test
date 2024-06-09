@@ -30,7 +30,7 @@ pip install djangorestframework
 2. Using the Command Prompt/Terminal, check if you have Python installed with 'python -V'
    *NB. You may have to type 'python3' if 'python' isn't recognised as a command.
   
-4. Create and then activate a virtual environment for your project [click here for instructions](https://docs.python.org/3/tutorial/venv.html).
+4. Create and then activate a virtual environment for your project [(click here for instructions)](https://docs.python.org/3/tutorial/venv.html).
   * When you have activated a virtual environment you will see the name you've given it appear on the left of the terminal.
     
 4. Install Django in the project with the command:
