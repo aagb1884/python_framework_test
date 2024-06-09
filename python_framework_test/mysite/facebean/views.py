@@ -11,10 +11,10 @@ from rest_framework.decorators import api_view
 
 
 def index(request):
-    latest_message_list = Message.objects.order_by("pub_date")[:5]
+    message_list = Message.objects.all()
     
     context = {
-        "latest_message_list": latest_message_list,
+        "message_list": message_list,
     }
     return render(request, "facebean/index.html", context)
 

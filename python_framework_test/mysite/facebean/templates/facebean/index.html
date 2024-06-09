@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-{% if latest_message_list %}
+{% if message_list %}
     <header>
     <div class="face-bean-logo">
        <h1 class="face">Face</h1><h1>BEAN</h1>
@@ -28,7 +28,7 @@
     </header>
 
     <section>
-    {% for message in latest_message_list %}
+    {% for message in message_list %}
     
     <div class="message">
         <div class="message-content">
