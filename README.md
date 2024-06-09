@@ -3,9 +3,9 @@
 
 Facebean is the messaging service used by the citizens of Beanotown. 
 
-## How it work
+## About the project
 
-This was my first time working with Django so I followed various tutorials to reach MVP: a page that displayed all messages stored in a database.
+This was my first time working with Django so I followed various tutorials to reach my MVP: a page that displayed all messages stored in a database.
 
 As it was a small project I decided to use SQL Lite rather than MySQL or PostgreSQL. I used [DB Browser for SQLite](https://sqlitebrowser.org/) to open the database file generated. 
 
@@ -30,7 +30,7 @@ pip install djangorestframework
 2. Using the Command Prompt/Terminal, check if you have Python installed with 'python -V'
    *NB. You may have to type 'python3' if 'python' isn't recognised as a command.
   
-4. Create and then activate a virtual environment for your project [click here for instructions](https://docs.python.org/3/tutorial/venv.html).
+4. Create and then activate a virtual environment for your project [(click here for instructions)](https://docs.python.org/3/tutorial/venv.html).
   * When you have activated a virtual environment you will see the name you've given it appear on the left of the terminal.
     
 4. Install Django in the project with the command:
@@ -56,10 +56,10 @@ pip install djangorestframework
    ```
 You will be able to find the main page at [http://localhost:8000/facebean/](http://localhost:8000/facebean/).
 
-There will not be any messages there to begin with, but there is a file with suggested messages. You can add these or your own using:
+There will not be any messages there to begin with, but there is a file with suggested messages (called, unsurprisingly, 'messages'). You can add these or your own using:
 * [The form on the API endpoint](http://localhost:8000/api/messages).
 * [Postman](https://www.postman.com/)/[Insomnia](https://insomnia.rest/)
-* SQL
+* SQLite Browser
 * [Python Shell](https://docs.djangoproject.com/en/5.0/intro/tutorial02/#playing-with-the-api):
   ```
   python manage.py shell
