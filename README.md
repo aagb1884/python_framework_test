@@ -42,15 +42,15 @@ pip install djangorestframework
    git clone git@github.com:aagb1884/python_framework_test.git
    cd python_framework_test
    ```
-6. Move into the 'mysite' folder and then run
+6. Install Django REST Framework
+    ```
+   pip3 install djangorestframework
+   ```
+8. Move into the 'mysite' folder and then run
    ```
    python manage.py migrate
    ```
-   * If you get the error "No module named 'rest_framework'" here try moving up a folder and then running
-   ```
-   pip3 install djangorestframework
-   ```
-7. Once you've successfully run migrate, you can run the server:
+9. Once you've successfully run migrate, you can run the server:
    ```
    python manage.py runserver
    ```
